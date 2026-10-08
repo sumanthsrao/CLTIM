@@ -1,0 +1,142 @@
+/* base-epub */
+
+*{box-sizing:border-box}
+body{margin:0;padding:0 5%;font-family:serif;font-size:1em;line-height:1.55;color:#111;background:#fff}
+#magazine{display:none}
+#magazine.visible{display:block}
+.mag-cover{padding:3em 0;text-align:center;page-break-after:always;background:none;color:#111;display:block}
+.mag-cover::before,.mag-cover::after{display:none}
+.mag-cover .k{display:none}
+.mag-cover h1{font-family:serif;font-size:2em;font-weight:400;margin:3em 0 .5em;line-height:1.15;max-width:none}
+.mag-cover h1 em{font-style:italic;font-weight:400}
+.mag-cover .lede{font-size:1.05em;line-height:1.6;margin:1.5em 0;color:#333}
+.mag-cover .stats{display:block;margin-top:3em}
+.mag-cover .stats>div{display:inline-block;margin:0 1em}
+.mag-cover .n{display:block;font-size:1.6em;font-weight:700}
+.mag-cover .l{font-size:.75em;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-top:.3em;font-weight:700}
+.mag-cover .bottom{display:block;margin-top:4em;font-size:.9em;color:#666}
+.mag-cover .bottom .mono{display:block;margin-top:.5em;font-family:monospace;font-size:.85em;color:#888}
+.mag-toc{padding:1em 0;page-break-after:always}
+.mag-toc h2{font-family:serif;font-size:1.8em;font-weight:400;margin:0 0 1em}
+.mag-toc h2::after{display:none}
+.mag-toc h3.part{font-size:.85em;letter-spacing:.18em;text-transform:uppercase;color:#666;margin:2em 0 .6em;font-weight:700;display:block}
+.mag-toc h3.part::before{display:none}
+.mag-toc ol{list-style:none;padding:0;margin:0}
+.mag-toc li{padding:.4em 0;font-size:1em;color:#333;display:block;font-weight:400}
+.mag-toc .num{font-family:monospace;color:#333;font-weight:700;font-size:.9em;margin-right:.6em}
+.mag-toc .id{display:none}
+.mag-divider{padding:3em 0;page-break-before:always;page-break-after:always;display:block;color:#111}
+.mag-divider::before{display:none}
+.mag-divider .k{font-size:.8em;letter-spacing:.24em;text-transform:uppercase;color:#666;margin:0 0 .5em;font-weight:700;display:block}
+.mag-divider .k::before{display:none}
+.mag-divider h2{font-family:serif;font-size:1.6em;margin:0;font-weight:400;line-height:1.2}
+.mag-infographic{padding:1em 0;page-break-before:always;page-break-after:always}
+.mag-infographic h2{font-family:serif;font-size:1.7em;font-weight:400;margin:0 0 1em}
+.mag-infographic h2::after{display:none}
+.mag-infographic .lede{font-size:.95em;color:#666;margin:0 0 2em;font-style:italic}
+.info-grid{display:block}
+.info-card{border-top:1px solid #ddd;padding:1.2em 0;margin:0;page-break-inside:avoid}
+.info-card::before{display:none}
+.info-num{font-family:monospace;font-size:.75em;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#666;padding:0;margin:0 0 .3em;display:block}
+.info-title{font-family:serif;font-size:1.15em;font-weight:700;margin:0 0 .5em;line-height:1.3}
+.info-lede{font-size:.95em;color:#333;line-height:1.55;margin:0 0 1em;border-left:2px solid #999;padding-left:.8em}
+.info-tiles{display:block;margin:0 0 1em}
+.info-tile{background:none;border:none;padding:.3em 0;margin:0;display:block}
+.info-tile::before{display:none}
+.info-tile-n{font-family:serif;font-size:1.05em;font-weight:700;line-height:1.2;margin:0;display:inline}
+.info-tile-l{font-size:.9em;color:#666;display:inline;margin-left:.4em}
+.info-chips{display:block;margin:0}
+.info-chip{display:inline;font-size:.9em;padding:0;border:none;background:none;color:#333;margin:0}
+.info-chip::before{content:"·  ";color:#999}
+.info-chip:first-child::before{content:""}
+.info-chip.acro{color:#111;font-family:monospace;font-weight:700}
+.mag-article{padding:1em 0;page-break-before:always}
+.mag-part-label{font-size:.75em;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#666;margin:0 0 .3em;display:block}
+.mag-part-label::before{display:none}
+.mag-title{font-family:serif;font-size:1.7em;font-weight:400;line-height:1.15;margin:0 0 1.4em;letter-spacing:-.02em}
+.mag-title::after{display:none}
+.mag-article .sec-head{display:block;margin:2em 0 .8em;padding:.8em 0 0;border-top:1px solid #ddd}
+.mag-article .sec-head h2{margin:0;font-size:1.08em;font-weight:700;color:#111;line-height:1.3}
+.mag-article .sectag{display:none}
+.mag-article .node{margin:1.6em 0}
+.mag-article .node-head{display:block;margin-bottom:.5em}
+.mag-article .node-head h3{margin:0 0 .3em;font-size:1.12em;font-weight:700;color:#111;line-height:1.25}
+.mag-article .nid{font-family:monospace;font-size:.75em;font-weight:700;padding:.1em .4em;border-radius:3px;background:#f1f5f9;color:#475569;margin-right:.5em;vertical-align:1px}
+.mag-article .summary-block{background:none;border:none;padding:0;margin:0 0 1em}
+.mag-article .summary-k{display:inline;font-size:1em;font-weight:700;font-variant:small-caps;color:#111;margin:0 .5em 0 0}
+.mag-article .summary-k::after{display:none}
+.mag-article .summary-v{display:inline;font-size:1em;line-height:1.6;color:#111}
+.mag-article ol.bl{margin:.5em 0 1em;padding:0 0 0 1.4em;list-style:disc;column-count:1!important;display:block}
+.mag-article ol.bl>li{position:static;padding:0;margin:0 0 .45em;line-height:1.55;font-size:1em;display:list-item;list-style:disc}
+.mag-article ol.bl>li::before{content:none!important;display:none!important}
+.mag-article .why{margin:1em 0;padding:0 0 0 1em;border-left:3px solid #999;font-size:.97em;color:#333;font-style:italic}
+.mag-article .why::before{content:"Note. ";font-weight:700;font-style:normal;color:#666;display:inline}
+.mag-article .tl{column-count:1!important;display:block}
+.mag-article .tl-i{position:static;padding:0;margin:0 0 .6em;font-size:.97em;display:block}
+.mag-article .tl-i::before,.mag-article .tl-i::after{display:none!important}
+.mag-article .tl-d{display:inline;font-size:1em;font-weight:700;color:#111;margin-right:.4em}
+.mag-article .tl-d::after{content:"—";color:#999;margin-left:.4em;font-weight:400}
+.mag-article .lawgrid{display:block;margin:1em 0}
+.mag-article .lawcard,html[data-theme="editorial"] .mag-article .lawcard{background:none;border:none;border-top:1px solid #ddd;padding:1em 0 0;margin:1.4em 0;page-break-inside:avoid}
+.mag-article .law-head{display:block;margin-bottom:.5em}
+.mag-article .law-name{display:inline;font-size:1.05em;font-weight:700;color:#111}
+.mag-article .law-year{display:inline;font-size:.9em;font-weight:400;padding:0;background:none;color:#666;margin-left:.3em}
+.mag-article .law-year::before{content:"("}
+.mag-article .law-year::after{content:")"}
+.mag-article .law-provisions{list-style:none;margin:.4em 0 0;padding:0 0 0 1em}
+.mag-article .law-provisions li{position:relative;padding:0 0 0 1em;font-size:.97em;color:#111;line-height:1.55;margin-bottom:.3em}
+.mag-article .law-provisions li::before{content:"—";position:absolute;left:0;top:0;color:#999;font-weight:400}
+.mag-article .facts{border-top:1px solid #999;padding-top:1em;margin-top:2em}
+.mag-article .fact-legend{display:block;padding:0;margin:0 0 1em;font-size:.9em;color:#666;font-style:italic}
+.mag-article .fact-legend strong{font-weight:700}
+.mag-article .facts ol{list-style:decimal;margin:0;padding:0 0 0 1.8em;column-count:1!important;display:block}
+.mag-article .facts ol>li{position:static;padding:0;margin:0 0 .5em;line-height:1.55;font-size:.97em;display:list-item;list-style:decimal}
+.mag-article .facts ol>li::before{content:none!important;display:none!important}
+.mag-article .facts ol>li:nth-child(odd){background:none}
+.mag-article .fact-cite{font-family:inherit;font-size:.82em;color:#666;margin-left:.3em;font-style:italic}
+.mag-article .fact-cite::before{content:"["}
+.mag-article .fact-cite::after{content:"]"}
+.mag-article .qs{column-count:1!important;display:block}
+.mag-article .q{padding:1em 0;margin:0;border-top:1px solid #eee}
+.mag-article .q:first-child{border-top:none;padding-top:.5em}
+.mag-article .q-stem{font-size:1em;color:#111;line-height:1.55;margin:0}
+.mag-article .chips{display:block;margin:.5em 0 1.5em}
+.mag-article .chip{display:inline;font-size:.95em;padding:0;background:none;border:none;color:#333}
+.mag-article .chip::before{content:"";display:none}
+.mag-article .chip::after{content:" · ";color:#999}
+.mag-article .chip:last-child::after{content:""}
+.mag-article .tagc{display:inline;font-size:.95em;font-style:italic;padding:0;background:none;border:none;color:#666}
+.mag-article .tagc::before{content:"— ";color:#999}
+
+
+/* theme-epub-editorial */
+
+html[data-theme="editorial"] body{font-family:Georgia,serif;color:#111;background:#fff;padding:0 5%}
+
+
+/* theme-epub-contemporary */
+
+html[data-theme="contemporary"] body{font-family:Inter,"Neue Haas Grotesk",Helvetica,Arial,sans-serif;color:#0a0a0a;background:#f4f1ea;padding:0 5%}
+html[data-theme="contemporary"] .mag-cover h1{font-weight:900;text-transform:uppercase}
+html[data-theme="contemporary"] .mag-cover h1 em{font-style:normal;color:#ff3b00}
+
+
+/* theme-epub-textbook */
+
+html[data-theme="textbook"] body{font-family:Charter,"Source Serif Pro",Georgia,serif;color:#1a1a1a;background:#fefae0;padding:0 6%}
+html[data-theme="textbook"] .mag-cover h1{font-family:Oswald,Archivo,sans-serif;font-weight:600;color:#0d3b66}
+html[data-theme="textbook"] .mag-toc h2,html[data-theme="textbook"] .mag-divider h2{font-family:Oswald,Archivo,sans-serif;color:#0d3b66}
+
+
+/* theme-epub-colorful */
+
+html[data-theme="colorful"] body{font-family:Manrope,Inter,system-ui,sans-serif;color:#1e1b4b;background:#faf5ff;padding:0 5%}
+html[data-theme="colorful"] .mag-cover h1{font-family:"Archivo Black",Poppins,sans-serif;font-weight:900;color:#ec4899}
+html[data-theme="colorful"] .mag-cover h1 em{color:#f59e0b;font-style:normal}
+
+
+/* theme-epub-newspaper */
+
+html[data-theme="newspaper"] body{font-family:"Iowan Old Style",Georgia,serif;color:#0a0a0a;background:#f5f2ea;padding:0 5%;text-align:justify}
+html[data-theme="newspaper"] .mag-cover h1{font-family:"Playfair Display",Georgia,serif;font-weight:900;text-transform:uppercase;text-align:center;border-top:3px solid #0a0a0a;border-bottom:3px solid #0a0a0a;padding:.3em 0}
+html[data-theme="newspaper"] .mag-cover h1 em{color:#8b0000;font-style:normal;display:block}
