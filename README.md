@@ -1,27 +1,16 @@
-# CLTIM — CLAT Topic Image Media
+# CLTIM — Topic reader assets
 
-Dedicated repository for **approved, publishable CLAT GK topic image assets**. The main `CLATGK` repository remains separate and must **not** be connected to Netlify.
+This Netlify-linked repository contains only shared external topic-reader CSS/JS and approved, topic-specific images. It is not a copy of the CLATGK repository.
 
-## Asset convention
+## Structure
 
-```text
-images/
-  2026-05/
-    CL05261T007/
-      CL05261T007S04.png
-      CL05261T007S06.png
-manifest.json
-```
+- `assets/7f3a91c2.css` — external topic viewer CSS
+- `assets/c84d21be.js` — external topic viewer JavaScript
+- `samples/forest-rights.html` — sample topic HTML for pilot testing
+- `images/YYYY-MM/TOPIC_ID/NODE_ID.ext` — approved images associated with individual topic nodes (currently none)
+- `manifest.json` — asset registry
+- `index.html` — pilot navigation
 
-Paths above are examples, not assertions that an image has been published.
+Do not place DeepSeek Magazine Builder HTML, JS or CSS, other duplicate stylesheets, unrelated stock/test images, source PDFs, prompts, credentials or pipeline outputs in this repository.
 
-- Names use canonical topic ID and node ID, with descriptive extensions.
-- `manifest.json` maps topic/node IDs to assets, source page, type, publication approval, and public URL.
-- Never publish source PDF pages or proprietary publisher artwork without confirming sharing rights.
-- Images remain private until individual assets are approved for public hosting.
-- When connected to Netlify, configure production branch `main`, no build command, publish directory repository root.
-- Any image used by a standalone HTML, PDF or EPUB export should be included in the generated output for offline use.
-
-## Safety
-
-Do not copy topic JSON, prompts, pipeline logs, source PDFs, credentials, or other CLATGK working data here.
+Only publish images after mapping to their correct topic/node and verifying public distribution rights.
