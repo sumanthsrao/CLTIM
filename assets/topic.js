@@ -1,0 +1,1 @@
+(()=>{"use strict";const root=document.querySelector("[data-topic-id]");if(!root)return;const id=root.getAttribute("data-topic-id");document.documentElement.dataset.topicId=id||"";})();
