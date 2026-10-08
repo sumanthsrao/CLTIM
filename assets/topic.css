@@ -1,0 +1,6 @@
+:root{--reader-width:980px;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--paper:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.58}
+.topic-shell{max-width:var(--reader-width);margin:0 auto;padding:28px 24px 60px}
+.topic-shell h1{font-size:2rem;line-height:1.2;margin:.25rem 0 1rem}.topic-meta{color:var(--muted);font-size:.9rem;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:20px}
+.topic-section{margin:24px 0}.topic-section h2{font-size:1.25rem}.fact{border-left:3px solid var(--line);padding-left:12px}
+@media print{.no-print{display:none!important}.topic-shell{max-width:none;padding:0}a{color:inherit;text-decoration:none}}
