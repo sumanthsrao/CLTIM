@@ -1,21 +1,5 @@
 {
   "schema": "CLTIM-IMAGE-MANIFEST-1.0",
-  "assets": [
-    {
-      "topic_id": "CL05261T007",
-      "node_id": null,
-      "path": "images/2026-05/CL05261T007/sample-maritime.svg",
-      "kind": "pilot-illustration",
-      "approved_for_publication": true,
-      "is_original_publisher_image": false
-    },
-    {
-      "topic_id": "CL05261T007",
-      "node_id": null,
-      "path": "images/2026-05/CL05261T007/sample-environment.svg",
-      "kind": "pilot-illustration",
-      "approved_for_publication": true,
-      "is_original_publisher_image": false
-    }
-  ]
+  "description": "Approved images mapped to topic and node",
+  "assets": []
 }
