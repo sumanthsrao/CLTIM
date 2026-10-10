@@ -1,6 +1,10 @@
 # CLTIM — Topic reader assets
 
-This Netlify-linked repository contains only shared external topic-reader CSS/JS and approved, topic-specific images. It is not a copy of the CLATGK repository.
+This repository contains only shared external topic-reader CSS/JS and approved, topic-specific images. It is not a copy of the CLATGK repository.
+
+**Hosting (2026-10-10):** moving from a manually-deployed Netlify site to GitHub Pages, served directly from this repo's `main` branch — auto-publishes on every push, no manual upload step. Once Pages is enabled (Settings → Pages → Source: `main` / root), the live URL becomes `https://sumanthsrao.github.io/CLTIM/assets/7f3a91c2.css` and `https://sumanthsrao.github.io/CLTIM/assets/c84d21be.js`. Update `control/FOUR_ACTOR_PIPELINE.md` and `Prompts/TOPIC_GPT_DAILY.md` in the CLATGK repo to point at the new URL once confirmed live.
+
+**2026-10-10 incident, for context:** this repo's `assets/7f3a91c2.css` and `assets/c84d21be.js` had been overwritten at some point with unrelated VISUAL-GPT dashboard code, not the real topic reader. The live Netlify site was still serving the correct, older reader content independently of what was committed here — meaning the previous Netlify deploy was not actually tracking this repo's `main` branch (or was deployed from a stale/different source). Both files were restored here from the live site's actual served content, verified line-for-line, before switching hosts — so GitHub Pages serves the real reader from day one, not a stale or substituted copy.
 
 ## Structure
 
